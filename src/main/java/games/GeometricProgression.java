@@ -5,15 +5,14 @@ import Instruments.AnswerCheck;
 
 public class GeometricProgression {
     public static void playInGeometricProgression(String name){
-        int length, numOfMissing; //длина и номер пропущенного
-        long [] progression; //массив с прогрессией
-        long multiplier, userAnswer; //множитель и ответ пользователя
         Scanner sc = new Scanner(System.in);
         Random rnd = new Random();
+        int length, numOfMissing; //длина и номер пропущенного
+        long [] progression; //массив с прогрессией
+        long multiplier = rnd.nextLong(2,20);; //множитель и ответ пользователя
 
         length = rnd.nextInt(5,10);
         numOfMissing = Math.abs(length - rnd.nextInt(5,10));
-        multiplier = rnd.nextLong(2,20);
         progression = new long[length];
         progression[0] = rnd.nextLong(1,10);
 
@@ -32,8 +31,6 @@ public class GeometricProgression {
         }
         System.out.println();
         System.out.print("Your answer: ");
-        userAnswer = sc.nextLong();
-        //сверка ответов
-        AnswerCheck.checkAnswer(userAnswer,progression[numOfMissing],name);
+        AnswerCheck.checkAnswer(sc.nextLong(),progression[numOfMissing],name); //сверка ответов
     }
 }
