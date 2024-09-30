@@ -20,7 +20,6 @@ public class GeometricProgression {
         for(int i = 1; i < length; i++){
             progression[i] = progression[i-1]*multiplier;
         }
-
         System.out.println("What number is missing in the progression?");
         System.out.print("Question: ");
         for (int i = 0; i < length; i++){
@@ -31,11 +30,9 @@ public class GeometricProgression {
                 System.out.print(".. ");
             }
         }
-
         System.out.println();
         System.out.print("Your answer: ");
         userAnswer = sc.nextLong();
-
         //сверка ответов
         AnswerCheck.checkAnswer(userAnswer,progression[numOfMissing],name);
     }
