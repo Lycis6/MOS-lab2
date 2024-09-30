@@ -6,7 +6,6 @@ import games.GeometricProgression;
 
 public class Main {
     public static void main(String[] args) {
-
         String userName;
 
         userName = Welcome.SayHello();
@@ -22,12 +21,5 @@ public class Main {
         GeometricProgression.playInGeometricProgression(userName);
         GeometricProgression.playInGeometricProgression(userName);
         GeometricProgression.playInGeometricProgression(userName);
-
-
-
-
-
-
-
         }
 }

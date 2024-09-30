@@ -1,6 +1,7 @@
 package games;
 import java.util.Random;
 import java.util.Scanner;
+import Instruments.AnswerCheck;
 
 public class GeometricProgression {
     public static void playInGeometricProgression(String name){
@@ -36,14 +37,6 @@ public class GeometricProgression {
         userAnswer = sc.nextLong();
 
         //сверка ответов
-        if(userAnswer == progression[numOfMissing]){
-            System.out.println("Correct!");
-            System.out.println("Congratulations, " + name + "!");
-        }
-        else {
-            System.out.println("'" + userAnswer + "' " + "is wrong answer ;(. Correct answer was " + "'" +
-                    progression[numOfMissing] +"'.");
-            System.out.println("Let's try again, " + name + "!");
-        }
+        AnswerCheck.checkAnswer(userAnswer,progression[numOfMissing],name);
     }
 }

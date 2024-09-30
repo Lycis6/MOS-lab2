@@ -1,9 +1,9 @@
 package games;
 import java.util.Random;
 import java.util.Scanner;
+import Instruments.AnswerCheck;
 
 public class Divider {
-
     public static void playInDivider(String name) {
         Random rnd = new Random();
         long correctAnswer, userAnswer;
@@ -20,24 +20,14 @@ public class Divider {
         correctAnswer = lcm3(number1, number2, number3);
 
         //сверка ответов
-        if(userAnswer == correctAnswer) {
-            System.out.println("Correct!");
-            System.out.println("Congratulations, " + name + "!");
-        }
-        else{
-            System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
-            System.out.println("Let's try again, " + name + "!");
-        }
+        AnswerCheck.checkAnswer(userAnswer,correctAnswer,name);
     }
-
     static long gcd(long a,long b){ //НОД
         return b == 0 ? a : gcd(b,a % b);
     }
-
     static long lcm(long a,long b){ //НОК
         return a / gcd(a,b) * b;
     }
-
     static long lcm3(long a, long b, long c){ //НОК для 3 чисел
         return lcm(a,lcm(b,c));
     }
