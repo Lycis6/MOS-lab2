@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Divider {
 
-    public void PlayInDivider(String name) {
+    public void playInDivider(String name) {
         Random rnd = new Random();
         long correctAnswer, userAnswer;
         long number1 = rnd.nextLong(1,99);
