@@ -2,7 +2,7 @@ package games;
 import java.util.Scanner;
 
 public class Welcome {
-    public String SayHello(){
+    public static String SayHello(){
         Scanner sc = new Scanner(System.in);
         String name;
 

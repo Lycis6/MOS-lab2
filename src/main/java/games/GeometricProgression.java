@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GeometricProgression {
-    public void playInGeometricProgression(String name){
+    public static void playInGeometricProgression(String name){
         int length, numOfMissing; //длина и номер пропущенного
         long [] progression; //массив с прогрессией
         long multiplier, userAnswer; //множитель и ответ пользователя
@@ -34,8 +34,10 @@ public class GeometricProgression {
         System.out.println();
         System.out.print("Your answer: ");
         userAnswer = sc.nextLong();
+
+        //сверка ответов
         if(userAnswer == progression[numOfMissing]){
-            System.out.println("Correct");
+            System.out.println("Correct!");
             System.out.println("Congratulations, " + name + "!");
         }
         else {

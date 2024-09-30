@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Divider {
 
-    public void playInDivider(String name) {
+    public static void playInDivider(String name) {
         Random rnd = new Random();
         long correctAnswer, userAnswer;
         long number1 = rnd.nextLong(1,99);
@@ -19,6 +19,7 @@ public class Divider {
         userAnswer = sc.nextLong();
         correctAnswer = lcm3(number1, number2, number3);
 
+        //сверка ответов
         if(userAnswer == correctAnswer) {
             System.out.println("Correct!");
             System.out.println("Congratulations, " + name + "!");
@@ -29,15 +30,15 @@ public class Divider {
         }
     }
 
-    long gcd(long a,long b){ //НОД
+    static long gcd(long a,long b){ //НОД
         return b == 0 ? a : gcd(b,a % b);
     }
 
-    long lcm(long a,long b){ //НОК
+    static long lcm(long a,long b){ //НОК
         return a / gcd(a,b) * b;
     }
 
-    long lcm3(long a, long b, long c){ //НОК для 3 чисел
+    static long lcm3(long a, long b, long c){ //НОК для 3 чисел
         return lcm(a,lcm(b,c));
     }
 

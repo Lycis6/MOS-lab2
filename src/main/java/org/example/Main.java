@@ -6,18 +6,22 @@ import games.GeometricProgression;
 
 public class Main {
     public static void main(String[] args) {
-        Welcome welcome = new Welcome();
-        Divider divider = new Divider();
-        GeometricProgression progression = new GeometricProgression();
+
         String userName;
 
-        userName = welcome.SayHello();
+        userName = Welcome.SayHello();
 
         //Играем в НОК
-        divider.playInDivider(userName);
+        Divider.playInDivider(userName);
+        Divider.playInDivider(userName);
+        Divider.playInDivider(userName);
+
+        System.out.println();
 
         //Играем в Геометрическую прогрессию
-        progression.playInGeometricProgression(userName);
+        GeometricProgression.playInGeometricProgression(userName);
+        GeometricProgression.playInGeometricProgression(userName);
+        GeometricProgression.playInGeometricProgression(userName);
 
 
 
